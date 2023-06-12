@@ -5,24 +5,32 @@ import styled from "@emotion/styled";
 
 import Toyosi from "@/assets/images/hero.jpg";
 import Header from "@/components/Header";
+import VideoSlides from "@/components/VideoSlides";
 
 export default function Home() {
   return (
-    <section className="relative">
-      <Header />
-      <Image src={Toyosi} alt="Toyosi" />
+    <>
+      <section className="relative">
+        <Header />
+        <Image src={Toyosi} alt="Toyosi" />
 
-      <div className="w-full z-[100] absolute left-0 flex flex-col gap-[14px] items-center">
-        <h1 className="text-[2.4rem] text-white">TOYOSI OSENI</h1>
+        <div className="w-full z-[100] absolute left-0 flex flex-col gap-[14px] items-center">
+          <h1 className="text-[2.4rem] text-white">TOYOSI OSENI</h1>
 
-        <ul className="flex gap-[31px] font-medium text-grey text-[1.4rem] text-center">
-          <li>GOSPEL ARTISTE</li>
-          <li>SONG WRITER</li>
-          <li>MUSICIAN</li>
-        </ul>
+          <ul className="flex gap-[31px] font-medium text-grey text-[1.4rem] text-center">
+            <li>GOSPEL ARTISTE</li>
+            <li>SONG WRITER</li>
+            <li>MUSICIAN</li>
+          </ul>
+        </div>
+
+        <SkewedDiv />
+      </section>
+
+      <div className="mt-[200px]">
+        <VideoSlides />
       </div>
-      <SkewedDiv />
-    </section>
+    </>
   );
 }
 
