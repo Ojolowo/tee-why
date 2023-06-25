@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 
 import Toyosi from "@/assets/images/hero.jpg";
 import Header from "@/components/Header";
-import VideoSlides from "@/components/VideoSlides";
+import CalledTheGirl from "@/components/CalledTheGirl";
 
 export default function Home() {
   return (
@@ -27,9 +27,8 @@ export default function Home() {
         <SkewedDiv />
       </section>
 
-      <div className="mt-[200px]">
-        <VideoSlides />
-      </div>
+      <div className="mt-[200px]"></div>
+      <CalledTheGirl />
     </>
   );
 }
