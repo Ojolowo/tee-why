@@ -4,17 +4,29 @@ import Image from "next/image";
 import styled from "@emotion/styled";
 
 import Toyosi from "@/assets/images/hero.jpg";
+import ToyosiSmall from "@/assets/images/hero-mobile.png";
 import Header from "@/components/Header";
 import CalledTheGirl from "@/components/CalledTheGirl";
+import Gallery from "@/components/Gallery";
+import EmjoyTheFullness from "@/components/EnjoyTheFullness";
+import WaitingList from "@/components/WaitingList";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <section className="relative">
         <Header />
-        <Image src={Toyosi} alt="Toyosi" />
 
-        <div className="w-full z-[100] absolute left-0 flex flex-col gap-[14px] items-center">
+        <Image src={Toyosi} alt="Toyosi" className="mobile:hidden" />
+
+        <Image
+          src={ToyosiSmall}
+          alt="Toyosi"
+          className="hidden mobile:block h-screen w-screen"
+        />
+
+        <div className="w-full z-[50] absolute left-0 flex flex-col gap-[14px] items-center mt-[50px]">
           <h1 className="text-[2.4rem] text-white">TOYOSI OSENI</h1>
 
           <ul className="flex gap-[31px] font-medium text-grey text-[1.4rem] text-center">
@@ -24,11 +36,16 @@ export default function Home() {
           </ul>
         </div>
 
-        <SkewedDiv />
+        {/* <SkewedDiv /> */}
       </section>
 
       <div className="mt-[200px]"></div>
+
       <CalledTheGirl />
+      <Gallery />
+      <EmjoyTheFullness />
+      <WaitingList />
+      <Footer />
     </>
   );
 }
@@ -45,5 +62,5 @@ const SkewedDiv = styled.div`
   -o-transform: skew(0deg, -5deg);
   -ms-transform: skew(0deg, -5deg);
   transform: skew(0deg, -5deg);
-  z-index: 50;
+  z-index: 30;
 `;

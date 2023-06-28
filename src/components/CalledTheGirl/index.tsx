@@ -8,9 +8,8 @@ export default function CalledTheGirl() {
     <div>
       <div className="relative">
         <Image src={TheGirl} alt="He called, she answered" />
-        <h1 className="absolute bottom-0 text-[6.4rem] text-white  px-[302px] leading-0">
-          He Called, <br />
-          She picked.
+        <h1 className="absolute bottom-0 text-[6.4rem] max-w-[370px] leading-none text-white  mx-[302px] leading-0">
+          He Called, She picked.
         </h1>
       </div>
 
