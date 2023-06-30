@@ -11,6 +11,7 @@ import Gallery from "@/components/Gallery";
 import EmjoyTheFullness from "@/components/EnjoyTheFullness";
 import WaitingList from "@/components/WaitingList";
 import Footer from "@/components/Footer";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <Header />
 
         <Image src={Toyosi} alt="Toyosi" className="mobile:hidden" />
-
+        
         <Image
           src={ToyosiSmall}
           alt="Toyosi"

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&family=Over+the+Rainbow&family=Raleway&display=swap');
+
+.Story {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: black;
+  }
+ 
+  .story-div {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 8rem;
+  }
+ 
+  .story-div-block1 {
+    display: block;
+    width: 30%;
+  }
+ 
+  .story-div-block1 h1 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    font-size: 64px;
+    line-height: 68px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+ 
+  .story-div-block1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 16.9rem;
+  }
+ 
+  .story-image {
+    height: 33.5%;
+  }
+ 
+  .story-image1 {
+    margin-top: 1%;
+    height: 56.5%;
+  }
+ 
+  .story-div-block2 {
+    display: block;
+    width: 69%;
+    margin-top: 3rem;
+    margin-left: 1%;
+  }
+ 
+  .story-div-block2 img {
+    object-fit: cover;
+    width: 100%;
+  }
+ 
+  .story-div-text {
+    font-family: 'Raleway';
+    font-style: normal;
+    width: 85%;
+    margin-left: 5%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    color: #949494;
+  }
+ 
+  .story-div-email-section {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 600px) {
+
+  .story-div-email-section {
+    height: 35rem;
+  }
+
+  .story-div {
+    width: 100%;
+    margin-left: 0%;
+    margin-bottom: 2rem;
+  }
+
+  .story-div-block1 {
+    display: block;
+    margin-top: 2rem;
+    width: 40%;
+  }
+
+  .story-div-block1 h1 {
+    margin-left: 10%;
+    font-size: 25.6px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+  }
+
+  .story-div-block1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 8.1rem;
+  }
+
+  .story-image {
+    height: 4.25rem;
+  }
+
+  .story-image1 {
+    height: 8rem;
+  }
+
+  .story-div-block2 {
+    width: 69%;
+    margin-left: 1%;
+  }
+
+  .story-div-text {
+    font-family: 'Raleway';
+    font-style: normal;
+    width: 85%;
+    margin-left: 5%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    color: #949494;
+  }
+}
