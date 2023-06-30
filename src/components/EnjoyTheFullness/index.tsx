@@ -7,12 +7,12 @@ import MusicPlayer from "./components/MusicPlayer";
 
 export default function EmjoyTheFullness() {
   return (
-    <div className="relative bg-dark py-[50px] mt-[50px]">
+    <div className="relative bg-dark py-[50px] mt-[50px] mobile:h-[1100px]">
       <Wrapper></Wrapper>
-      <div className="absolute top-[50px] px-[100px] left-0 h-full w-full">
-        <div className="flex justify-between">
+      <div className="absolute top-[50px] px-[100px] mobile:px-[24px] left-0 min-h-full w-full">
+        <div className="flex justify-between mobile:flex-col mobile:gap-[36px]">
           <div className="flex-1 mt-[45px]">
-            <h1 className="max-w-[373px] text-[6.4rem] leading-none mb-[45px]">
+            <h1 className="max-w-[373px] text-[6.4rem] mobile:text-[4.1rem] leading-none mb-[45px]">
               Enjoy the Fullness of Toyosi Oseni
             </h1>
 
