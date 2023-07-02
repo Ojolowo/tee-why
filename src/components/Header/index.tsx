@@ -1,53 +1,78 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
+import Facebook from "@/assets/images/footer/facebook.png";
+import Instagram from "@/assets/images/footer/instagram.png";
+import Twitter from "@/assets/images/footer/twitter.png";
 import Logo from "@/assets/images/logo.png";
 import media from "@/styles/media";
+import NewMusic from "../NewMusic";
 
 export default function Header() {
   const [isNavActive, setIsNavActive] = React.useState<boolean>(false);
+  const [isTopBar, setIsTopBar] = React.useState<boolean>(false);
 
   return (
-    <div className="w-full absolute flex justify-between items-center px-[111px] top-[44px] h-[44px] mobile:px-[24px]">
-      <Image src={Logo} alt="Toyosi Oseni" height={52} />
+    <>
+      <div className="w-full absolute flex justify-between items-center px-[111px] top-[44px] h-[44px] mobile:px-[24px]">
+        <Image src={Logo} alt="Toyosi Oseni" height={52} />
 
-      <div className="flex items-center gap-[7px]">
-        <h2 className="text-[1.6rem] font-bold uppercase">New Music</h2>
-        <div className="w-[11px] h-[11px] rounded-full bg-white"></div>
+        <div className="flex items-center gap-[7px]">
+          <h2
+            className="text-[1.6rem] font-bold uppercase"
+            role="button"
+            onClick={() => setIsTopBar((prev) => !prev)}
+          >
+            New Music
+          </h2>
+          <div className="w-[11px] h-[11px] rounded-full bg-white"></div>
+        </div>
+
+        <NavLinks active={isNavActive}>
+          <li>
+            <Link href="#">Gallery</Link>
+          </li>
+          <li>
+            <Link href="#">Story</Link>
+          </li>
+          <li>
+            <Link href="#">Music</Link>
+          </li>
+          <li>
+            <Link href="#">Video</Link>
+          </li>
+          <li>
+            <Link href="#">Contact</Link>
+          </li>
+
+          <div
+            className={
+              !isNavActive
+                ? "hidden"
+                : "flex justify-between w-[160px] pt-[80px]"
+            }
+          >
+            <Image src={Facebook} alt="Facebook" />
+            <Image src={Twitter} alt="Twitter" />
+            <Image src={Instagram} alt="Instagram" />
+          </div>
+        </NavLinks>
+
+        <Burger
+          active={isNavActive}
+          className="w-[24px] z-[1000]"
+          onClick={() => setIsNavActive(!isNavActive)}
+        >
+          <div className="line-1 border border-white mb-[5px]"></div>
+          <div className="line-2 border border-white mb-[5px]"></div>
+          <div className="line-3 border border-white"></div>
+        </Burger>
       </div>
-
-      <NavLinks active={isNavActive}>
-        <li>
-          <Link href="#">Gallery</Link>
-        </li>
-        <li>
-          <Link href="#">Story</Link>
-        </li>
-        <li>
-          <Link href="#">Music</Link>
-        </li>
-        <li>
-          <Link href="#">Video</Link>
-        </li>
-        <li>
-          <Link href="#">Contact</Link>
-        </li>
-      </NavLinks>
-
-      <Burger
-        active={isNavActive}
-        className="w-[24px] z-[1000]"
-        onClick={() => setIsNavActive(!isNavActive)}
-      >
-        <div className="line-1 border border-white mb-[5px]"></div>
-        <div className="line-2 border border-white mb-[5px]"></div>
-        <div className="line-3 border border-white"></div>
-      </Burger>
-    </div>
+      {isTopBar && <NewMusic />}
+    </>
   );
 }
 

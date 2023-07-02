@@ -11,6 +11,7 @@ import Gallery from "@/components/Gallery";
 import EmjoyTheFullness from "@/components/EnjoyTheFullness";
 import WaitingList from "@/components/WaitingList";
 import Footer from "@/components/Footer";
+import VideoSlides from "@/components/VideoSlides";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
 
       <div className="mt-[200px]"></div>
 
+      <VideoSlides />
       <CalledTheGirl />
       <Gallery />
       <EmjoyTheFullness />
